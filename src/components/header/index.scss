@@ -1,0 +1,43 @@
+.links {
+  box-sizing: border-box;
+  all: unset;
+  position: relative;
+  padding: 10px 40px;
+  display: inline-block;
+  font-size: 26px;
+  color: white;
+
+
+  &:hover {
+    background-color: rosybrown;
+  }
+}
+.linksHolder {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.headerTop {
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    color: white;
+    font-size: 44px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+
+    span {
+      transform: translate(65px, -26px);
+      align-items: bottom;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(243, 243, 243);
+    }
+  }
+}

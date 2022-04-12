@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body,#root{
+  max-height: 100%;
+}
+body{
+  background: url("https://images2.alphacoders.com/104/1041773.jpg") no-repeat center center fixed;
+
+  background-size: cover;
+}
