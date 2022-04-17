@@ -1,0 +1,112 @@
+[
+    {
+      "id": 1,
+      "name": "Quadra Turbo-R V-Tech",
+      "price": 6,
+      "description": "good",
+      "img": [
+        "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/01/cyberpunk-2077-quadra-turbo-r-v-tech-1.jpg?q=50&fit=crop&w=1600&dpr=1.5"
+      ],
+      "category": {
+        "0": "Comida",
+        "1": "Sobremesas",
+        "2": "Gelado"
+      }
+    },
+  {
+      "id": 2,
+      "name": "Quadra Type-66 Cthulhu",
+      "price": 76000.0,
+      "description": "The Quadra Type-66 was built to race. And when you optimally tune it, add some extra juice, swap out the firmware for soft... that's when you unleash a real horror from your worst nightmares onto the streets.",
+      "img": [
+        "https://i.pinimg.com/736x/53/28/bf/5328bf374f17b5de50e858d62b82ac7b.jpg"
+      ],
+      "category": {
+        "0": "Car",
+        "1": "Sport",
+        "2": "Quadra"
+      }
+    },
+ {
+      "id": 3,
+      "name": "Aerondight S9 Guinevere",
+      "price": 225000.0,
+      "description": "For many, the name Rayfield is synonymous with wealth - and for good reason. The price of the Rayfield Aerondight exceeds the GDP of many island nations. And it's worthing noting this British-made ultra-luxury, ultra-performance masterpiece is worth every enny of it. The pedigree engine under its hood puts this car on equal footing with professional racing vehicles, and the interior feels like a 5-star penthouse suite. But if that's not enough to get you excited, the Aerondight doesn't have a single window. With the help of CrystalDome, the vehicle's surroundings are displayed in real time inside the cabin, ensuring complete driver privacy and a stunning experience.",
+      "img": [
+        "https://cdn.discordapp.com/attachments/832239784244150292/964608353596747796/Screenshot_2022-04-15_at_20.28.52.png"
+      ],
+      "category": {
+        "0": "Car",
+        "1": "Hypercar",
+        "2": "Rayfield"
+      }
+    },
+     {
+      "id": 4,
+      "name": "Rayfield Caliburn",
+      "price": 157000.0,
+      "description": "The rich can be capricious. The dignified design of Rayfield's flagship vehicle, the Aerondight, doesn't appeal to everyone. Some prefer an equal level of luxury but with a feistier flare. Rayfield developed the Caliburn with these clients in mind. Imbued with a sportier soul and crafted with fire-breathing engine and aerodynamic body, driving the Caliburn feels like flying a jet at ground level. And whenever the driver wants to come down from their adrenaline high, they need only let go of the steering wheel to let the onboard navigational computer take control.",
+      "img": ["https://cdn.discordapp.com/attachments/832239784244150292/964612361145159700/Screenshot_2022-04-15_at_20.44.47.png"],
+      "category": {
+        "0": "Car",
+        "1": "Hypercar",
+        "2": "Rayfield"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Mizutani Shion Coyote",
+      "price": 77000.0,
+      "description": "By looking at it, you'd think the Mizutani Shion was a city car, built for thin-crust roads and unsuited for the desert wasteland. And you'd be right - the standard edition would grind to a dead halt at the first rocky knoll. But with upgrades, reinforcement and improved suspension, the Shion cuts through harsh terrain like a lazer knife through butter.",
+      "img": [
+        "https://cdn.discordapp.com/attachments/832239784244150292/964613989604671518/Screenshot_2022-04-15_at_20.51.08.png"
+      ],
+      "category": {
+        "0": "Car",
+        "1": "Sport",
+        "2": "Mizutani"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Quadra Type-66 Javelina",
+      "price": 99000.0,
+      "description": "Although the Quadra Type-66 was designed with city streets in mind, you can still find them out cruising the desert wastes. These modified models, called Javelinas, are equipped with light armor plating and expertly tuned engines. And thanks to CrystalDome technology, the driver can remain unseen while still maintaining a full, unobstructed view of their surroundings.",
+      "img": [
+        "https://cdn.discordapp.com/attachments/832239784244150292/964615677468082216/Screenshot_2022-04-15_at_20.58.06.png"
+      ],
+      "category": {
+        "0": "Car",
+        "1": "Sport",
+        "2": "Quadra"
+      }
+    },
+  {
+      "id": 7,
+      "name": "Porsche Turbo 911 II (930)",
+      "price": 200000.0,
+      "description": "An all-time classic and king among 1% wannabes - the Porsche Turbo 911 II (930) is one of the most iconic cars in automotive history. Not many are left in the world, but the ones that remain are each worth their weight in gold. Its sleek, compact appearance is unmistakable - who wouldn't want one? Sadly, none could ever hope to look as cool behind the wheel as Johnny Silverhand.",
+      "img": [
+        "https://cdn.discordapp.com/attachments/832239784244150292/964617422457933834/Screenshot_2022-04-15_at_21.04.55.png"
+      ],
+      "category": {
+        "0": "Car",
+        "1": "Sport",
+        "2": "Porsche"
+      }
+    },
+  {
+      "id": 8,
+      "name": "Quadra Type-66 Avenger",
+      "price": 75000.0,
+      "description": "The standard Quadra Type-66 is a powerful car in its own right, but the Avenger? Now, that's another animal. The roar of its engine causes windows and the knees of carjocks everywhere to shake. Compared to its base model, the Avenger has better handling and top-end speed. Hell, it even looks better.",
+      "img": [
+        "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/12/quadra-type-66-avenger-photo-mode.jpg"
+      ],
+      "category": {
+        "0":"Car",
+        "1": "Sport",
+        "2": "Quadra"
+      }
+    }
+]
