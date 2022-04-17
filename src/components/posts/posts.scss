@@ -1,0 +1,18 @@
+li{
+    all: unset;
+   
+    div{
+  width: 300px;
+    background-size: 100% 100%;
+    aspect-ratio: 2.1/1;
+    resize:both;
+    }
+}
+.List{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+    width: 900px;
+}

@@ -1,5 +1,44 @@
 .Home{
+   
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex:1;
+position:relative;
 height:100%;
- 
-    align-items: center;
+h1{
+    margin-bottom: 20px;
 }
+}
+
+.slider {
+    box-sizing: border-box;
+    width: 1200px;
+    height: 600px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .slide {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+ 
+  .buttons {
+    position: relative;
+    top: -20px;
+  }
+  .buttons button {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: white;
+  }

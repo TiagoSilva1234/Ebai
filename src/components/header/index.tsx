@@ -6,7 +6,7 @@ const Header = ()=>{
 
 
     return(
-        <>
+        <div className="Header">
         <div className="headerTop">
         <div className="logo" ></div>
          <div className="title"><h1>EBAI</h1><span>so que nao</span></div> 
@@ -15,7 +15,7 @@ const Header = ()=>{
         <div className="linksHolder">
         {array.map((e)=> e !== "Home" ? <Link className="links" to={e}>{e}</Link> : <Link className="links" to="/">{e}</Link>)}
         </div>
-        </>
+        </div>
     );
 
 }
