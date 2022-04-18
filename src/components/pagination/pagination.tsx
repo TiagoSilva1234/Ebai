@@ -1,5 +1,5 @@
 import React from 'react'
-
+import'./pagination.scss'
 
 const Pagination = ({postsPerPage,totalPosts,paginate})=>{
  const pageNumbers =[];
@@ -9,7 +9,7 @@ const Pagination = ({postsPerPage,totalPosts,paginate})=>{
  return(
      <ul>
          {pageNumbers.map(number=>(<li key={number}>
-             <a onClick={()=> paginate(number)}>
+             <a style={{cursor: 'pointer'}} onClick={()=> paginate(number)}>
                  {number}
              </a>
          </li>))}

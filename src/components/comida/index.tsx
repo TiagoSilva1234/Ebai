@@ -25,12 +25,13 @@ const currentPosts = posts.slice(indexOfFirstPost,indexOfLastPost);
    
         <div className="productsList">
         <Posts className="products" posts={currentPosts}/>
-      
+        </div> 
+        <div className="pagination">
         <Pagination className="pagination" postsPerPage={postsPerPage}
     
         totalPosts={posts.length} 
         paginate={paginate}/>
-          </div> 
+         </div>
         </div>
     )
 }

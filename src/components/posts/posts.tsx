@@ -1,13 +1,25 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./posts.scss";
-
+import {GlobalContext} from '../../utils/context/context.tsx'
+import {useNavigate} from 'react-router-dom';
 const Posts = ({ posts }) => {
+
+ const navigate = useNavigate();
+
+  const{post,setPost} = useContext(GlobalContext);
+
+ function  goToProduct(p){
+   setPost(p);
+ navigate("/product")
+ }
   return (
     <ul className="List">
       {posts.map((post) => (
         <li key={post.id}>
-          <div style={{ backgroundImage: `url(${post.img})` }}></div>
-          <p>{post.name}</p>
+          <div onClick={()=>goToProduct(post)} className="singlepost">
+          <div  className="post" style={{ backgroundImage: `url(${post.img})` }}></div>
+          <p style={{cursor: 'pointer'}}>{post.name}</p>
+          </div>
         </li>
       ))}
     </ul>

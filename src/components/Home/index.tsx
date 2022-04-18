@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <h1>Welcome to the best shop youll ever see :)</h1>
+      <h1>Welcome to the best backery youll ever see :)</h1>
       <div className="slider">
         <StyledImageContainer left={left}>
           {img.map((e) => (

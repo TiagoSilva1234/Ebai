@@ -1,16 +1,29 @@
 .Comida{
+  color:white;
+ flex: 1 1 auto;
 
   display: flex;
  flex-direction: column;
   align-items: center;
+
 }
 
 .productsList{
-height:100%;
-display:flex;
-a{
-  color:white;font-size: 40px;
+  display: flex;
+  height:100%;
+  align-items: center;
+  flex-direction: column;
+width: 100%;
+background-color: rgba(black,0.8);
+
 }
+.pagination{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-size: 40px;
+  color:white;
 }
 
 .App{
