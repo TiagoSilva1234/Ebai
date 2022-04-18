@@ -15,56 +15,56 @@
     },
   {
       "id": 2,
-      "name": "Quadra Type-66 Cthulhu",
-      "price": 76000.0,
-      "description": "The Quadra Type-66 was built to race. And when you optimally tune it, add some extra juice, swap out the firmware for soft... that's when you unleash a real horror from your worst nightmares onto the streets.",
+      "name": "ESKILSTUNA",
+      "price": 799,
+      "description": "For many, the name Rayfield is synonymous with wealth - and for good reason. The price of the Rayfield Aerondight exceeds the GDP of many island nations. And it's worthing noting this British-made ultra-luxury, ultra-performance masterpiece is worth every enny of it. The pedigree engine under its hood puts this car on equal footing with professional racing vehicles, and the interior feels like a 5-star penthouse suite. But if that's not enough to get you excited, the Aerondight doesn't have a single window. With the help of CrystalDome, the vehicle's surroundings are displayed in real time inside the cabin, ensuring complete driver privacy and a stunning experience.",
       "img": [
         "https://www.ikea.com/pt/pt/images/products/eskilstuna-sofa-3-lugares-c-chaise-longue-hillared-bege__0798221_pe767198_s5.jpg?f=xl"
       ],
       "category": {
-        "0": "Car",
-        "1": "Sport",
-        "2": "Quadra"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
  {
       "id": 3,
-      "name": "Aerondight S9 Guinevere",
-      "price": 225000.0,
-      "description": "For many, the name Rayfield is synonymous with wealth - and for good reason. The price of the Rayfield Aerondight exceeds the GDP of many island nations. And it's worthing noting this British-made ultra-luxury, ultra-performance masterpiece is worth every enny of it. The pedigree engine under its hood puts this car on equal footing with professional racing vehicles, and the interior feels like a 5-star penthouse suite. But if that's not enough to get you excited, the Aerondight doesn't have a single window. With the help of CrystalDome, the vehicle's surroundings are displayed in real time inside the cabin, ensuring complete driver privacy and a stunning experience.",
+      "name": "ASARUM",
+      "price": 279,
+      "description": "Este sofá-cama é fácil de converter e é tão confortável que pode dormir nele todas as noites. Tem também arrumação para a roupa de cama debaixo do assento. A solução ideal para quem mora num espaço pequeno.",
       "img": [
-        "https://cdn.discordapp.com/attachments/832239784244150292/964608353596747796/Screenshot_2022-04-15_at_20.28.52.png"
+        "https://www.ikea.com/pt/pt/images/products/asarum-sofa-cama-de-3-lugares-cinz__1028494_pe835379_s5.jpg?f=xl"
       ],
       "category": {
-        "0": "Car",
-        "1": "Hypercar",
-        "2": "Rayfield"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
      {
       "id": 4,
-      "name": "Rayfield Caliburn",
-      "price": 157000.0,
-      "description": "The rich can be capricious. The dignified design of Rayfield's flagship vehicle, the Aerondight, doesn't appeal to everyone. Some prefer an equal level of luxury but with a feistier flare. Rayfield developed the Caliburn with these clients in mind. Imbued with a sportier soul and crafted with fire-breathing engine and aerodynamic body, driving the Caliburn feels like flying a jet at ground level. And whenever the driver wants to come down from their adrenaline high, they need only let go of the steering wheel to let the onboard navigational computer take control.",
-      "img": ["https://cdn.discordapp.com/attachments/832239784244150292/964612361145159700/Screenshot_2022-04-15_at_20.44.47.png"],
+      "name": "LYCKSELE LÖVÅS",
+      "price": 239,
+      "description": "Este sofá transforma‑se rápida e facilmente numa cama de casal. É fácil manter a frescura, uma vez que a capa do colchão e do sofá pode ser removida e lavada. Alterne entre diferentes capas para dar ao sofá e ao espaço um novo visual.",
+      "img": ["https://www.ikea.com/pt/pt/images/products/lycksele-loevas-sofa-cama-2lug-ransta-cru__0949714_pe799974_s5.jpg?f=xl"],
       "category": {
-        "0": "Car",
-        "1": "Hypercar",
-        "2": "Rayfield"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
     {
       "id": 5,
-      "name": "Mizutani Shion Coyote",
-      "price": 77000.0,
-      "description": "By looking at it, you'd think the Mizutani Shion was a city car, built for thin-crust roads and unsuited for the desert wasteland. And you'd be right - the standard edition would grind to a dead halt at the first rocky knoll. But with upgrades, reinforcement and improved suspension, the Shion cuts through harsh terrain like a lazer knife through butter.",
+      "name": "HOLMSUND",
+      "price": 649,
+      "description": "Este sofá transforma-se rápida e facilmente numa espaçosa cama e a sala passa a ser um quarto. O espaço de arrumação por baixo do assento é de fácil acesso e permite arrumar roupa de cama, almofadas e um bom livro.",
       "img": [
-        "https://cdn.discordapp.com/attachments/832239784244150292/964613989604671518/Screenshot_2022-04-15_at_20.51.08.png"
+        "https://www.ikea.com/pt/pt/images/products/holmsund-sofa-cama-de-canto-nordvalla-cinz__0829250_pe600302_s5.jpg?f=xl"
       ],
       "category": {
-        "0": "Car",
-        "1": "Sport",
-        "2": "Mizutani"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
     {
@@ -76,23 +76,23 @@
         "https://cdn.discordapp.com/attachments/832239784244150292/964615677468082216/Screenshot_2022-04-15_at_20.58.06.png"
       ],
       "category": {
-        "0": "Car",
-        "1": "Sport",
-        "2": "Quadra"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
   {
       "id": 7,
-      "name": "Porsche Turbo 911 II (930)",
-      "price": 200000.0,
-      "description": "An all-time classic and king among 1% wannabes - the Porsche Turbo 911 II (930) is one of the most iconic cars in automotive history. Not many are left in the world, but the ones that remain are each worth their weight in gold. Its sleek, compact appearance is unmistakable - who wouldn't want one? Sadly, none could ever hope to look as cool behind the wheel as Johnny Silverhand.",
+      "name": "GRÖNLID",
+      "price": 799,
+      "description": "O sofá-cama tem um colchão com 12cm de espessura em espuma de elevada elasticidade que proporciona um apoio confortável ao seu corpo e uma superfície suave para dormir sem juntas incomodativas.",
       "img": [
-        "https://cdn.discordapp.com/attachments/832239784244150292/964617422457933834/Screenshot_2022-04-15_at_21.04.55.png"
+        "https://www.ikea.com/pt/pt/images/products/groenlid-sofa-cama-2lug-sporda-cru__0621866_pe690122_s5.jpg?f=xl"
       ],
       "category": {
-        "0": "Car",
-        "1": "Sport",
-        "2": "Porsche"
+        "0": "Casa",
+        "1": "Moveis",
+        "2": "Sofas"
       }
     },
   {
