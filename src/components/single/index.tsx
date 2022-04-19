@@ -26,10 +26,10 @@ function handleClick() {
         <div className="info">
         <div className="name">
           <h1>{post.name}</h1>
-          <div className="price">{post.price} €</div>
+          <div className="price">{post.price} <span> €/unit</span></div>
         </div>
         <div className="description">{post.description}</div>
-   <div><button  onClick={()=>handleClick()} style={{width:"200px",height:"200px"}}>idk</button></div>
+   <div><button className="addcart" onClick={()=>handleClick()}>ADD TO CART</button></div>
         </div>
       </div>
     </div>

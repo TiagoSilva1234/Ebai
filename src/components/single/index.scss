@@ -33,23 +33,45 @@ bottom: 0px;
         width: 40%;
         display: flex;
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content:space-between;
         .description{
             font-size: 24px;
         }
         .name{
+            
             align-self: start;
-         
+         width: 100%;
  display: flex;
  align-items:center;
- flex-direction: column;
+justify-content: space-between;
    .price{
        color:rosybrown;
        align-self: end;
        font-weight: bold;
-       font-size: 26px;
+       font-size: 34px;
        margin-left: 20px;
+       background-color: transparent;
+
+       height:100%;
+       span{
+    
+        font-size: 24px;
+    }
    }
+        
         }
+    }
+}
+.addcart{
+   outline: none;
+   font-weight: bold;
+   border: 0px solid black;
+   box-shadow: 3px 3px 8px 0px gray;
+    background-color:rosybrown;
+    width: 350px;
+    height: 50px;
+    transition: all 0.1s ease-out;
+    &:hover{
+        transform: scale(1.05)
     }
 }

@@ -12,8 +12,9 @@ const Home = () => {
  
   const [left, setLeft] = useState("0%");
   useEffect(() => {
-  setTimeout(() =>{
+  const idk = setTimeout(() =>{
      
+
       if (left === "0%") {
         setLeft("-100%");
       return;
@@ -21,10 +22,12 @@ const Home = () => {
         setLeft("-200%");
         return;
       }
+    
       setLeft("0%");
-    },10000);
-   
-  },);
+      
+    },5000);
+   return ()=> clearTimeout(idk)
+  },[left]);
 
   return (
     <div className="Home">

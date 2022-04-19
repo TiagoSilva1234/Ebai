@@ -1,9 +1,9 @@
 import React from 'react'
 import'./pagination.scss'
 
-const Pagination = ({postsPerPage,totalPosts,paginate})=>{
+const Pagination = ({postsPerPage,totalPosts,paginate,currentPage})=>{
  const pageNumbers =[];
- const currentPage = 1;
+ 
  for(let i = 1;i<= Math.ceil(totalPosts/postsPerPage);i++){
      pageNumbers.push(i)
  }
@@ -14,7 +14,7 @@ const Pagination = ({postsPerPage,totalPosts,paginate})=>{
          </a>
          </li>
          {pageNumbers.map(number=>(<li key={number}>
-             <a  onClick={()=> paginate(number)}>
+             <a style={currentPage === number? {color: "rosybrown"}: {color:"white" }} onClick={()=> paginate(number)}>
                  {number}
              </a>
          </li>))}

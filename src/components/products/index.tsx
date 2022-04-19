@@ -11,7 +11,7 @@ const Comida = ()=>{
  const [postsPerPage,setPostPerPage] = useState(8)
 
 useEffect(()=>{
-    console.log(data)
+
     setPosts(data)
 },[])
 
@@ -40,7 +40,7 @@ if(typeof pageNumber === "string"){
         <Posts className="products" posts={currentPosts}/>
         </div> 
         <div className="pagination">
-        <Pagination className="pagination" postsPerPage={postsPerPage}
+        <Pagination className="pagination" currentPage={currentPage} postsPerPage={postsPerPage}
     
         totalPosts={posts.length} 
         paginate={paginate}/>
