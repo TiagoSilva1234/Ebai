@@ -8,7 +8,7 @@ const Comida = ()=>{
 
  const [posts,setPosts] = useState([])
  const[currentPage,setCurrentPage] = useState(1);
- const [postsPerPage,setPostPerPage] = useState(9)
+ const [postsPerPage,setPostPerPage] = useState(8)
 
 useEffect(()=>{
     console.log(data)

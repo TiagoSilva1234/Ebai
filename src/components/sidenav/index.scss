@@ -1,0 +1,19 @@
+.sidenav{
+  
+    right:0px;
+    bottom:0px;
+    height: 82vh;
+    background-color:black;
+    width: 250px;position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    overflow: hidden;
+  }
+
+  .sidenav.hide{
+    width: 0;
+  }
+  .content{
+    display: block;
+  }

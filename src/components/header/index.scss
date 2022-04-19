@@ -46,3 +46,20 @@ cursor: pointer;
 
 top: 0px;
 }
+.headerTop{
+  display: flex;
+  justify-content: space-between;
+  .logor{
+    color:white;
+    cursor: pointer;
+    padding: 20px;
+    border: 2px solid white;
+    align-self: center;
+    margin-right: 20px;
+    z-index: 3;
+  }
+  .logol{
+   width: 82px;
+  }
+}
+
