@@ -5,10 +5,11 @@
   padding: 10px 40px;
   display: inline-block;
   font-size: 26px;
-  color: white;
-
+  color: rosybrown;
+cursor: pointer;
 
   &:hover {
+    color: black;
     background-color: rosybrown;
   }
 }
@@ -31,7 +32,7 @@
     align-items: center;
     flex-direction: column;
   
-
+    
     span {
       transform: translate(65px, -26px);
       align-items: bottom;

@@ -1,0 +1,17 @@
+ul{
+    cursor: pointer;
+    padding:5px;
+    li{
+        transition: all 0.1s ease;
+        margin: 0px 5px;
+        &:hover{
+            color: rosybrown;
+        }
+       a{
+        transition: all 0.1s ease;
+        &:active{
+          
+        } 
+       }
+    }
+}

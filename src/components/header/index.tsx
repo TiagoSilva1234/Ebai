@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import "./index.scss"
 const Header = ()=>{
-    const array = ["Home","Products","Comida"]
+    const array = ["Home","Categorys","Products"]
 
 
     return(

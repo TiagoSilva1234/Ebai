@@ -4,9 +4,9 @@ import data from "../../storage/data.json";
 import { StyledImageContainer } from "../styled/styled";
 const img = [
   "https://www.wallpaperbetter.com/wallpaper/196/892/8/modern-green-sofa-2K-wallpaper.jpg",
-  "https://images6.alphacoders.com/434/thumb-1920-434430.jpg",
+  "https://c4.wallpaperflare.com/wallpaper/582/443/760/white-design-room-sofa-wallpaper-preview.jpg",
   ,
-  "https://www.wallpaperbetter.com/wallpaper/682/950/500/dessert-cake-berries-2K-wallpaper.jpg",
+  "https://wallpapercave.com/wp/wp1942060.jpg",
 ];
 const Home = () => {
  
@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <h1>Welcome to the best backery youll ever see :)</h1>
+      <h1>Welcome to Ebai.</h1>
       <div className="slider">
         <StyledImageContainer left={left}>
           {img.map((e) => (

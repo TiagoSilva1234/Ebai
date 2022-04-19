@@ -9,7 +9,47 @@
         font-size: 26px;
     }
 }
+.routes{
+    color:rosybrown;
+}
 .Footer{
 bottom: 0px;
 
+}
+.mainpage{
+    display: flex;
+    margin-top: 100px;
+    .image{
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 600px;
+            height: 500px;
+        }
+    }
+ justify-content: space-evenly;
+    .info{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        .description{
+            font-size: 24px;
+        }
+        .name{
+            align-self: start;
+         
+ display: flex;
+ align-items:center;
+ flex-direction: column;
+   .price{
+       color:rosybrown;
+       align-self: end;
+       font-weight: bold;
+       font-size: 26px;
+       margin-left: 20px;
+   }
+        }
+    }
 }
