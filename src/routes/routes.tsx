@@ -6,14 +6,15 @@ import Casa from "../components/casa/index.tsx"
 import Comida from "../components/products/index.tsx"
 import Products from "../components/categorys/index.tsx"
 import Single from '../components/single/index.tsx'
-import {PostContext,GlobalContext} from '../utils/context/context.tsx'
-
+import {PostContext} from '../utils/context/context.tsx'
+import {CartContext } from "../utils/context/ferrariContext.tsx";
 const RoutesApp = () => {
 
   
 
   return (
     <PostContext>
+      <CartContext>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
@@ -24,6 +25,7 @@ const RoutesApp = () => {
         </Route>
       </Routes>
     </BrowserRouter>
+    </CartContext>
     </PostContext>
   );
 };

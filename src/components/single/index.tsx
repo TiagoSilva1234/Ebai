@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../utils/context/context.tsx";
+import {GlobalContextCart} from '../../utils/context/ferrariContext.tsx'
+import{useNavigate} from 'react-router-dom'
 import './index.scss';
 const Single = () => {
+  const navigate = useNavigate()
   const { post, setPost } = useContext(GlobalContext);
-
+const {cart, setCart} = useContext(GlobalContextCart);
+function handleClick() {
+  setCart( previous =>[...previous,post]);
+  navigate(-1)
+}
   console.log(post.category["0"]);
   return (
     <div className="Product">
@@ -22,7 +29,7 @@ const Single = () => {
           <div className="price">{post.price} €</div>
         </div>
         <div className="description">{post.description}</div>
-   
+   <div><button  onClick={()=>handleClick()} style={{width:"200px",height:"200px"}}>idk</button></div>
         </div>
       </div>
     </div>
