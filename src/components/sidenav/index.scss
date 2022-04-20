@@ -14,6 +14,11 @@ box-sizing: border-box;
     white-space: nowrap;
     transition: all 0.4s ease;
     overflow: hidden;
+    h2{
+      color: rosybrown;
+      font-size: 30px;
+      
+    }
   }
 
   .sidenav.hide{
@@ -21,9 +26,10 @@ box-sizing: border-box;
   }
   .content{
  overflow: auto;
+ height: 700px;
  max-height: 700px;
  overflow-x: hidden;
-
+border: 1px solid rosybrown;
   }
   .top{
     height: 10%;

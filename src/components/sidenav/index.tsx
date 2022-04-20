@@ -21,6 +21,7 @@ console.log(cart)
             <div className="top">
                 <FaArrowRight    className="hidebtn" onClick={()=>setActive(active ? false:true )}/>
             </div>
+            <h2>Your items:</h2>
             <div className="content">
     {cart.map((data)=><div className="item">
         <img  style={{width: "60px", height: "50px"}} src={data.img[0]}></img>
