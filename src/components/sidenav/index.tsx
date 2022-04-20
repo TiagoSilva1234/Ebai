@@ -2,7 +2,8 @@ import React,{useContext, useEffect,useState} from 'react';
 import './index.scss'
 import data from '../../storage/data.json'
 import { GlobalContextCart } from '../../utils/context/ferrariContext.tsx';
-const Sidenav = ({active})=>{
+import {FaArrowRight} from 'react-icons/fa'
+const Sidenav = ({active, setActive})=>{
     const { cart, setCart } = useContext(GlobalContextCart);
     const [price,setPrice] = useState(0);
 
@@ -17,7 +18,9 @@ console.log(cart)
 
     return (
         <div className={active ? "sidenav hide" : "sidenav"}>
-            <div className="top"></div>
+            <div className="top">
+                <FaArrowRight    className="hidebtn" onClick={()=>setActive(active ? false:true )}/>
+            </div>
             <div className="content">
     {cart.map((data)=><div className="item">
         <img  style={{width: "60px", height: "50px"}} src={data.img[0]}></img>

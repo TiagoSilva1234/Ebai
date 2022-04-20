@@ -21,13 +21,16 @@ box-sizing: border-box;
   }
   .content{
  overflow: auto;
- max-height: 600px;
+ max-height: 700px;
  overflow-x: hidden;
 
   }
   .top{
-    height: 25%;
+    height: 10%;
     top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
   }
   .buybutton{
     position:absolute;
@@ -90,4 +93,17 @@ box-sizing: border-box;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(black,0.0) ; 
+}
+.hidebtn{
+  font-size: 25px;
+  font-weight: bold;
+left: 0px;
+height: 60px;width: 60px;
+color:rosybrown;
+
+background-color: transparent;
+transition: all 0.1s ease;
+&:hover{
+  box-shadow: 3px 3px 7px 0px rosybrown;
+}
 }

@@ -23,20 +23,23 @@ cursor: pointer;
 
   box-sizing: border-box;
   display: flex;
+
   justify-content: center;
 
   .title {
     color: white;
-    font-size: 44px;
+
     display: flex;
     align-items: center;
     flex-direction: column;
-  
+  h1{
+    font-size: 78px;
+  }
     
     span {
-      transform: translate(65px, -26px);
+      transform: translate(20px, -26px);
       align-items: bottom;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       color: rgb(243, 243, 243);
     }
@@ -49,14 +52,29 @@ top: 0px;
 .headerTop{
   display: flex;
   justify-content: space-between;
+
+
   .logor{
-    color:white;
+    align-self: flex-start;
+    top: 0px;
+    width: 100px;
+  height: 72px;
+    right: 0px;
+    color:rosybrown;
     cursor: pointer;
     padding: 20px;
-    border: 2px solid white;
+    border: 5px solid rosybrown;
     align-self: center;
     margin-right: 20px;
-    z-index: 3;
+  transition: all 0.2s ease;
+     &:hover{
+       background-color:rosybrown;
+       color:black;
+     
+     }
+    p{
+      font-weight: bold;
+    }
   }
   .logol{
    width: 82px;

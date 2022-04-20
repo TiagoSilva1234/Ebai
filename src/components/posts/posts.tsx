@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React,{useContext, useEffect} from "react";
 import "./posts.scss";
 import {GlobalContext} from '../../utils/context/context.tsx'
 import {useNavigate} from 'react-router-dom';
@@ -12,6 +12,7 @@ const Posts = ({ posts }) => {
    setPost(p);
  navigate("/product")
  }
+ useEffect(()=>{},)
   return (
     <ul className="List">
       {posts.map((post) => (
