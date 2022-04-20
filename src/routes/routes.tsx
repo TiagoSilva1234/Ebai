@@ -21,6 +21,7 @@ const RoutesApp = () => {
           <Route index element={<Home />} />
           <Route path="/product"element={<Single/>}/>
           <Route  path="/Products" element={<Comida />} />
+          <Route  path="/Products/:page" element={<Comida />} />
           <Route  path="/Categorys" element={<Products />} />
         </Route>
       </Routes>

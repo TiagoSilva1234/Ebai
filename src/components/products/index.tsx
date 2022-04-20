@@ -5,14 +5,24 @@ import Posts from "../posts/posts.tsx";
 import Pagination from "../pagination/pagination.tsx";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useNavigate,useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 const Comida = () => {
+  const navigate = useNavigate();
+  let search = window.location.search;
+let params = new URLSearchParams(search);
+
   const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+
+
+  const [currentPage, setCurrentPage] = useState(params.get("page")!== null? parseInt(""+ params.get("page")) : 1 );
+
   const [postsPerPage, setPostPerPage] = useState(8);
   const [filter, setFilter] = useState("");
+
+
+
   useEffect(() => {
-    console.log(filter);
     if (filter === "Hprice") {
       setPosts((ye) => data.sort((a, b) => b.price - a.price));
       setCurrentPage(2);
@@ -43,15 +53,19 @@ const Comida = () => {
         return;
       }
     setPosts((ye) => data.sort((a, b) => a.id - b.id));
-    setCurrentPage(2);
-    setTimeout(() => setCurrentPage(1), 0);
-
+   
     return;
   }, [filter]);
+  useEffect(() =>{
+   
+  },[currentPage])
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: any, postsNumber: any) => {
+  
+    
+ 
     if (pageNumber === "previous" && currentPage == 1) {
       return;
     }
@@ -59,12 +73,11 @@ const Comida = () => {
       return;
     }
     if (typeof pageNumber === "string") {
-      setCurrentPage(
-        pageNumber === "previous" ? currentPage - 1 : currentPage + 1
-      );
+        pageNumber === "previous" ?  navigate("?page="+(currentPage-1)) :  navigate("?page="+(currentPage+1))
       return;
     }
-    setCurrentPage(pageNumber);
+    navigate("?page="+currentPage);
+   
   };
 
   return (

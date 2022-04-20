@@ -7,10 +7,11 @@ ul{
         &:hover{
             color: rosybrown;
         }
-       a{
+       .link{
+           all: unset;
         transition: all 0.4s ease;
-        &:active{
-          
+        &:hover{
+            color: rosybrown;
         } 
        }
     }

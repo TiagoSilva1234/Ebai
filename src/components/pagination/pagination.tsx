@@ -1,5 +1,6 @@
 import React from 'react'
 import'./pagination.scss'
+import { Link } from 'react-router-dom';
 
 const Pagination = ({postsPerPage,totalPosts,paginate,currentPage})=>{
  const pageNumbers =[];
@@ -10,16 +11,16 @@ const Pagination = ({postsPerPage,totalPosts,paginate,currentPage})=>{
  return(
      <ul>
          <li>
-         <a onClick={()=>paginate("previous")}>&lt;
-         </a>
+         <Link className="link" to={`/Products/?page=${Math.max(currentPage -1,1)}`} onClick={()=>currentPage(Math.max(currentPage -1,1))}>&lt;
+         </Link>
          </li>
          {pageNumbers.map(number=>(<li key={number}>
-             <a style={currentPage === number? {color: "rosybrown"}: {color:"white" }} onClick={()=> paginate(number)}>
+             <Link className="link" to={`/Products/?page=${number}`} onClick={(()=>currentPage(number))} style={currentPage === number? {color: "rosybrown"}: {color:"white" }} >
                  {number}
-             </a>
+             </Link>
          </li>))}
          <li>
-         <a onClick={()=>paginate("next",pageNumbers.length)}>&gt;</a>
+         <Link  className="link" to={`/Products/?page=${Math.min(currentPage +1,pageNumbers.length)}`} onClick={()=>currentPage(Math.max(currentPage +1,1))}>&gt;</Link>
          </li>
      </ul>
  )
