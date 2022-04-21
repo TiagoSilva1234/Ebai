@@ -2,6 +2,7 @@ import React,{useContext, useEffect} from "react";
 import "./posts.scss";
 import {GlobalContext} from '../../utils/context/context.tsx'
 import {useNavigate} from 'react-router-dom';
+import data from '../../storage/data.json'
 const Posts = ({ posts }) => {
 
  const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Posts = ({ posts }) => {
 
  function  goToProduct(p){
    setPost(p);
- navigate("/product")
+ navigate(`/product/${p.id}`)
  }
  useEffect(()=>{},)
   return (

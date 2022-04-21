@@ -15,7 +15,7 @@ const Sidenav = ({active, setActive})=>{
         setPrice(price + cart[cart.length-1]["price"]);
     },[cart])
 console.log(cart)
-
+console.log(cart)
     return (
         <div className={active ? "sidenav hide" : "sidenav"}>
             <div className="top">
