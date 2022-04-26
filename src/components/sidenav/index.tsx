@@ -29,8 +29,8 @@ const Sidenav = ({active, setActive})=>{
         </div>)}
     </div>
     <div className="buybutton">
-    <button className="cashout"><span>PAY TIME</span></button>
-    <div className="price">{price}€</div>
+    <button className="cashout" onClick={()=> setCart([])} ><span>PAY TIME</span></button>
+    <div className="price" >{price}€</div>
     </div>
     
         </div>

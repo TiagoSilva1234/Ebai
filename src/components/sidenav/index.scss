@@ -47,11 +47,16 @@ border: 1px solid rosybrown;
   .cashout{ 
    align-self: center;
     all:unset;
- 
+    cursor: pointer;
+  box-sizing: border-box;
   width: 100%;
     height: 50px;
     text-align: center;
     background-color:rosybrown;
+
+    &:hover{
+      border: 4px solid black;
+    }
   
   }
 }

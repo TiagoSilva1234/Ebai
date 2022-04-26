@@ -7,7 +7,7 @@ import { useNavigate,useLocation,useParams,Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Search from '../search/index.tsx'
 const Comida = () => {
   const {filter} = useParams();
   const navigate = useNavigate();
@@ -148,7 +148,7 @@ let params = new URLSearchParams(search);
       
         </DropdownButton>
     
-    
+    <Search placeholder="Search" data={data}/>
       </div>
 
       <div className="productsList">
