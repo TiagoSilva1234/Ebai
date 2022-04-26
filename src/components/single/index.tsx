@@ -28,7 +28,7 @@ function handleClick() {
 
 }
 
-  console.log(post[0].category["0"]);
+  
   if(post.length === 0){
     return <h1>loading...</h1>
   }

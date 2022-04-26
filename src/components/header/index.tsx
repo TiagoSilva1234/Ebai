@@ -16,7 +16,7 @@ const Header = ()=>{
          <div className="logor" onClick={()=> setActive(active ? false : true)} ><p>CART</p></div>
         </div>
         <div className="linksHolder">
-        {array.map((e)=> e !== "Home" ? <Link className="links" to={e}>{e}</Link> : <Link className="links" to="/">{e}</Link>)}
+        {array.map((e)=> e !== "Home" ? <Link className="links" key={e} to={e}>{e}</Link> : <Link className="links" key={e} to="/">{e}</Link>)}
         </div>
         </div>
           <Sidenav active={active} setActive={setActive}/>

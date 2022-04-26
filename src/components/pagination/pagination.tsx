@@ -8,7 +8,7 @@ const Pagination = ({postsPerPage,totalPosts,paginate,currentPage,filter})=>{
  for(let i = 1;i<= Math.ceil(totalPosts/postsPerPage);i++){
      pageNumbers.push(i)
  }
- console.log(filter)
+
  return(
      <ul>
          <li>

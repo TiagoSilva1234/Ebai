@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import "./index.scss";
 import data from "../../storage/data.json";
 import Posts from "../posts/posts.tsx";
@@ -16,6 +16,7 @@ let params = new URLSearchParams(search);
 
   const [posts, setPosts] = useState([]);
 
+  const [check,setCheck] = useState(0);
 
   const [currentPage, setCurrentPage] = useState(params.get("page")!== null? parseInt(""+ params.get("page")) : 1 );
 
@@ -23,45 +24,46 @@ let params = new URLSearchParams(search);
   const [filterd, setFilterd] = useState("none");
 
   function addFilter(filter){
-    setFilterd(filter)
+    setCheck(check === 0 ? 1: 0)
     navigate(`/Products/${filter}/?page=${1}`)
   }
+  useEffect(()=>{
+    
+    if(filter === undefined){
+      
+      addFilter("none")
+    }
+  },[filter])
 
   useEffect(() => {
- 
+    const copy = [...data]
     if (filter === "Hprice") {
-      setPosts((ye) => data.sort((a, b) => b.price - a.price));
-      setCurrentPage(2);
-      setTimeout(() => setCurrentPage(1), 0);
-
+   
+     copy.sort((a, b) => b.price - a.price);
+      setPosts(copy);
       return;
     }
     if (filter === "Lprice") {
-      setPosts((ye) => data.sort((a, b) => a.price - b.price));
-      setCurrentPage(2);
-      setTimeout(() => setCurrentPage(1), 0);
-
+     
+      
+      copy.sort((a, b) => a.price - b.price);
+       setPosts(copy);    
       return;
     }
     if (filter === "sofas") {
-        setPosts((ye) => data.filter((a) => a.category["2"] === "Sofas"));
-        setCurrentPage(2);
-        setTimeout(() => setCurrentPage(1), 0);
-  
+        setPosts((ye) => data.filter((a) => a.category["2"] === "Sofas")); 
         return;
       }
-      if (filter === "armarios") {
-      
+      if (filter === "armarios") {  
         setPosts((ye) => data.filter((a) => a.category["2"] === "Armarios"));
-        setCurrentPage(2);
-        setTimeout(() => setCurrentPage(1), 0);
-  
         return;
       }
-    setPosts((ye) => data.sort((a, b) => a.id - b.id));
-   
-    return;
-  }, [filter]);
+     
+        setPosts((ye) => data.sort((a, b) => a.id - b.id));
+      
+     return;
+    
+  }, [check]);
   
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -74,10 +76,10 @@ let params = new URLSearchParams(search);
       return;
     }
     if (typeof pageNumber === "string") {
-        pageNumber === "previous" ?  navigate(`/${filterd}/?page=`+(currentPage-1)) :  navigate(`/${filterd}/?page=`+(currentPage+1))
+        pageNumber === "previous" ?  navigate(`Products/${filter}/?page=`+(currentPage-1)) :  navigate(`Products/${filter}/?page=`+(currentPage+1))
       return;
     }
-    navigate(`/${filterd}/?page=`+currentPage);
+    navigate(`Products/${filter}/?page=`+currentPage);
    
   };
 
@@ -159,7 +161,7 @@ let params = new URLSearchParams(search);
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
           paginate={paginate}
-          filter={filterd}
+          filter={filter}
         />
       </div>
     
