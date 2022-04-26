@@ -3,11 +3,13 @@ import "./index.scss";
 import data from "../../storage/data.json";
 import Posts from "../posts/posts.tsx";
 import Pagination from "../pagination/pagination.tsx";
+import { useNavigate,useLocation,useParams,Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { useNavigate,useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 const Comida = () => {
+  const {filter} = useParams();
   const navigate = useNavigate();
   let search = window.location.search;
 let params = new URLSearchParams(search);
@@ -18,11 +20,15 @@ let params = new URLSearchParams(search);
   const [currentPage, setCurrentPage] = useState(params.get("page")!== null? parseInt(""+ params.get("page")) : 1 );
 
   const [postsPerPage, setPostPerPage] = useState(8);
-  const [filter, setFilter] = useState("");
+  const [filterd, setFilterd] = useState("none");
 
-
+  function addFilter(filter){
+    setFilterd(filter)
+    navigate(`/Products/${filter}/?page=${1}`)
+  }
 
   useEffect(() => {
+ 
     if (filter === "Hprice") {
       setPosts((ye) => data.sort((a, b) => b.price - a.price));
       setCurrentPage(2);
@@ -56,16 +62,11 @@ let params = new URLSearchParams(search);
    
     return;
   }, [filter]);
-  useEffect(() =>{
-   
-  },[currentPage])
+  
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: any, postsNumber: any) => {
-  
-    
- 
     if (pageNumber === "previous" && currentPage == 1) {
       return;
     }
@@ -73,10 +74,10 @@ let params = new URLSearchParams(search);
       return;
     }
     if (typeof pageNumber === "string") {
-        pageNumber === "previous" ?  navigate("?page="+(currentPage-1)) :  navigate("?page="+(currentPage+1))
+        pageNumber === "previous" ?  navigate(`/${filterd}/?page=`+(currentPage-1)) :  navigate(`/${filterd}/?page=`+(currentPage+1))
       return;
     }
-    navigate("?page="+currentPage);
+    navigate(`/${filterd}/?page=`+currentPage);
    
   };
 
@@ -93,11 +94,11 @@ let params = new URLSearchParams(search);
           id="dropdown-button-dark-example1"
           variant="secondary"
         >
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("")}>none</Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("Hprice")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("none")}>none</Dropdown.Item>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("Hprice")}>
             Higher{" "}
           </Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("Lprice")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("Lprice")}>
             Lower{" "}
           </Dropdown.Item>
     
@@ -119,8 +120,8 @@ let params = new URLSearchParams(search);
           variant="secondary"
         >
             
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("armarios")}>armarios</Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("sofas")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("armarios")}>armarios</Dropdown.Item>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("sofas")}>
             sofas
           </Dropdown.Item>
          
@@ -134,10 +135,10 @@ let params = new URLSearchParams(search);
           id="dropdown-button-dark-example1"
           variant="secondary"
         >
-              <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("sofas")}>
+              <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("sofas")}>
             example
           </Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => setFilter("sofas")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("sofas")}>
             example
           </Dropdown.Item>
         </DropdownButton>
@@ -158,6 +159,7 @@ let params = new URLSearchParams(search);
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
           paginate={paginate}
+          filter={filterd}
         />
       </div>
     

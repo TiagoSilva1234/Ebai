@@ -10,13 +10,13 @@
 html,body,#root,.App{
   position: relative;
   height: 100%;
+  background-color: black;
 
 
 
 }
 body{
-  background: url("https://images2.alphacoders.com/104/1041773.jpg") no-repeat center center fixed;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.8);
   background-size: cover;
 }
 
@@ -28,3 +28,4 @@ body{
   
 }
 
+/*  background: url("https://images2.alphacoders.com/104/1041773.jpg") no-repeat center center fixed;*/
