@@ -14,7 +14,7 @@
   height:100%;
   align-items: center;
   flex-direction: column;
-width: 100%;
+
 
 
 }
@@ -56,7 +56,10 @@ width: 100%;
   flex-direction: column;
  justify-content:space-between;
   align-self: start;
+  position: relative;
   position: fixed;
+  width: auto ;
+  
 }
 .btn-secondary{
   width: 100% !important;

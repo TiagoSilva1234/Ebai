@@ -1,24 +1,36 @@
 .searchInputs {
   margin-top: 105px;
+  color:rosybrown;
   display: flex;
+
 }
 
-.search input {
-  background-color: white;
+.search {
+  
+ input {
+  background-color: black;
+  color:rosybrown;
   border: 0;
   border-radius: 2px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   font-size: 18px;
   padding: 15px;
-  height: 30px;
-  width: 300px;
+  height: 60px;
+  width: 210px;
+ 
+
+}
 }
 
 .searchIcon {
+  color:rosybrown;
+  position: relative;
+  right: 40px;
   height: 60px;
   width: 50px;
-  background-color: white;
+  padding: 0px;
+  background-color: black;
   display: grid;
   place-items: center;
 }
@@ -32,9 +44,11 @@ input:focus {
 
 .dataResult {
   margin-top: 5px;
-  width: 300px;
-  height: 200px;
-  background-color: white;
+  width: 220px;
+  max-height: 200px;
+  background-color: black;
+  color:rosybrown;
+  
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
@@ -49,14 +63,16 @@ input:focus {
   height: 50px;
   display: flex;
   align-items: center;
-  color: black;
+  color:rosybrown;
 }
 
-.dataItem p {
+.dataItem > p {
   margin-left: 10px;
+
 }
 a {
   text-decoration: none;
+  
 }
 
 a:hover {
