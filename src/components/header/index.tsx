@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "./index.scss"
 import Sidenav from '../sidenav/index.tsx'
 const Header = ()=>{
+  
     const array = ["Home","Categorys","Products"]
  const [active,setActive] = useState(true)
 

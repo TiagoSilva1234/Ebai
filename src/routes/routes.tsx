@@ -22,7 +22,6 @@ const RoutesApp = () => {
           <Route path="/product/:id"element={<Single/>}/>
           <Route  path="/Products" element={<Comida />} />
           <Route  path="/Products/:filter" element={<Comida />} />
-          <Route  path="/Products/:page" element={<Comida />} />
           <Route  path="/Categorys" element={<Products />} />
         </Route>
       </Routes>

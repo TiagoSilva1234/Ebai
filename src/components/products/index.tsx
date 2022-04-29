@@ -8,66 +8,75 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Search from '../search/index.tsx'
+
 const Comida = () => {
   const {filter} = useParams();
   const navigate = useNavigate();
   let search = window.location.search;
 let params = new URLSearchParams(search);
-
   const [posts, setPosts] = useState([]);
 
   const [check,setCheck] = useState(0);
 
   const [currentPage, setCurrentPage] = useState(params.get("page")!== null? parseInt(""+ params.get("page")) : 1 );
 
+  const [sort, setSort] = useState(params.get("sort")!== null? parseInt(""+ params.get("sort")) : "none" );
+
   const [postsPerPage, setPostPerPage] = useState(8);
   const [filterd, setFilterd] = useState("none");
 
   function addFilter(filter){
     setCheck(check === 0 ? 1: 0)
-    navigate(`/Products/${filter}/?page=${1}`)
+    navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+  }
+  function addSort(sort){
+    setCheck(check === 0 ? 1: 0)
+    setSort(sort)
+    navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+   
   }
   useEffect(()=>{
     
     if(filter === undefined){
-      
       addFilter("none")
     }
   },[filter])
 
   useEffect(() => {
     const copy = [...data]
-    if (filter === "Hprice") {
+    console.log(sort)
+    if (sort === "Hprice") {
    
      copy.sort((a, b) => b.price - a.price);
       setPosts(copy);
-      return;
+ 
     }
-    if (filter === "Lprice") {
-     
-      
+    if (sort === "Lprice") {
+    
       copy.sort((a, b) => a.price - b.price);
        setPosts(copy);    
-      return;
+ 
     }
+    if(sort === "none"){
+      copy.sort((a, b) => a.id - b.id);
+      setPosts(copy)
+    }
+
     if (filter === "sofas") {
-        setPosts((ye) => data.filter((a) => a.category["2"] === "Sofas")); 
+        setPosts((ye) => copy.filter((a) => a.category["2"] === "Sofas")); 
         return;
       }
       if (filter === "armarios") {  
-        setPosts((ye) => data.filter((a) => a.category["2"] === "Armarios"));
+        setPosts((ye) => copy.filter((a) => a.category["2"] === "Armarios"));
         return;
       }
-     
-        setPosts((ye) => data.sort((a, b) => a.id - b.id));
-      
-     return;
     
   }, [check]);
   
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
   const paginate = (pageNumber: any, postsNumber: any) => {
     if (pageNumber === "previous" && currentPage == 1) {
       return;
@@ -80,7 +89,6 @@ let params = new URLSearchParams(search);
       return;
     }
     navigate(`Products/${filter}/?page=`+currentPage);
-   
   };
 
   return (
@@ -96,11 +104,11 @@ let params = new URLSearchParams(search);
           id="dropdown-button-dark-example1"
           variant="secondary"
         >
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("none")}>none</Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("Hprice")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addSort("none")}>none</Dropdown.Item>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addSort("Hprice")}>
             Higher{" "}
           </Dropdown.Item>
-          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("Lprice")}>
+          <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addSort("Lprice")}>
             Lower{" "}
           </Dropdown.Item>
     
