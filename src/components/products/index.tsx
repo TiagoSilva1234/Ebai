@@ -27,12 +27,21 @@ let params = new URLSearchParams(search);
 
   function addFilter(filter){
     setCheck(check === 0 ? 1: 0)
-    navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+    if(filter === "none"){
+
+    navigate(`/Products/?sort=${sort}&page=${1}`)
+    }else{
+      navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+    }
   }
   function addSort(sort){
     setCheck(check === 0 ? 1: 0)
     setSort(sort)
-    navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+    if(filter === undefined){
+    navigate(`/Products/?sort=${sort}&page=${1}`)
+    }else{
+      navigate(`/Products/${filter}/?sort=${sort}&page=${1}`)
+    }
    
   }
   useEffect(()=>{
@@ -44,7 +53,7 @@ let params = new URLSearchParams(search);
 
   useEffect(() => {
     const copy = [...data]
-    console.log(sort)
+    
     if (sort === "Hprice") {
    
      copy.sort((a, b) => b.price - a.price);
@@ -145,8 +154,8 @@ let params = new URLSearchParams(search);
           id="dropdown-button-dark-example1"
           variant="secondary"
         >
-              <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("sofas")}>
-            example
+              <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("none")}>
+           none
           </Dropdown.Item>
           <Dropdown.Item style={{color:"rosybrown"}} onClick={() => addFilter("sofas")}>
             example
